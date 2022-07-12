@@ -1,4 +1,5 @@
 import React from 'react';
+import SideNav from './SideNav.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>'Hello world!'</h1>
+        <SideNav isLoggedIn={false}/>
+        <div className='main'>
+          <div className='topBar' id='topBar-calName'>
+            <h1>Calendar Name</h1>
+          </div>
+        </div>
       </div>
     )
   }
