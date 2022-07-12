@@ -4,4 +4,3 @@ import * as ReactDOM from 'react-dom/client';
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(<App />);
-// ReactDOM.render(<App />, document.getElementById('app'));
