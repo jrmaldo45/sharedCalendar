@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import useCollapse from 'react-collapsed';
 
 function SideNav(props) {
   const [logInOut, setLogInOut] = useState(null);
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
@@ -18,7 +20,13 @@ function SideNav(props) {
       </div>
 
       <input type='button' value='+ New Calendar' />
-      <input type='button' value='> My Calendars' />
+      <div>
+        <button {...getToggleProps()}>
+          > My Calendars
+        </button>
+        <section {...getCollapseProps()}>Collapsed content</section>
+      </div>
+      {/* <input type='button' value='> My Calendars' /> */}
 
       <div id='login-btn'>{logInOut}</div>
     </div>
