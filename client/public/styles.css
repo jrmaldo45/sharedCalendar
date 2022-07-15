@@ -94,3 +94,32 @@ h1 {
   color: white;
   font-size: 26pt;
 }
+
+
+/* Buttons */
+.btn {
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.nav-btn {
+  width:100%;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 12pt;
+  border-bottom: 1px solid gray;
+}
+.nav-btn:hover {
+  background-color: #908C93;
+}
+
+
+/* drop downs & collapsables */
+.dropDown {
+  border-bottom: 0px;
+  padding-bottom: 3px;
+}
+.dropDown-content {
+  padding: 3px 15%;
+  border-bottom: 0px;
+}
