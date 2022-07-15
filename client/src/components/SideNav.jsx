@@ -19,14 +19,17 @@ function SideNav(props) {
         <h1>Shared Calendar</h1>
       </div>
 
-      <input type='button' value='+ New Calendar' />
       <div>
-        <button {...getToggleProps()}>
-          > My Calendars
-        </button>
-        <section {...getCollapseProps()}>Collapsed content</section>
+        <input type='button' className='btn nav-btn' value='+ New Calendar' />
       </div>
-      {/* <input type='button' value='> My Calendars' /> */}
+      <div>
+        <input className='btn nav-btn dropDown' type='button' value='> My Calendars' {...getToggleProps()} />
+        <section {...getCollapseProps()}>
+          <input type='button' className='btn nav-btn dropDown-content' value='Collapsed content' />
+          <input type='button' className='btn nav-btn dropDown-content' value='Collapsed content' />
+          <input type='button' className='btn nav-btn dropDown-content' value='Collapsed content' />
+        </section>
+      </div>
 
       <div id='login-btn'>{logInOut}</div>
     </div>
